@@ -9,11 +9,11 @@ express
 
 
 ## in app :
-you can get all toys in db , you can search by name or category , you can add toys and update
-you can see the result toys by page number and per pagep
-you can get all toys in db , you can search by name or category
-you can add toys and update , you can see the result toys by page number and per page
+you can get all toys in DB,
+ you can search by name or category, you can add toys and update, 
+you can see the result toys by page number and /or  perPage, 
 Feel free to add toys to the database and use unlimited
+
 
 
 ##    example  :
@@ -22,16 +22,16 @@ Feel free to add toys to the database and use unlimited
  https://toysserverapi.herokuapp.com/toys  - to get all toys 
 
 
- /page/1?perPage=5  - ti get thw toys in page  and limit on page   example:
+ /page/1?perPage=5  - to get the toys in page  and limit on page   example:
 https://toysserverapi.herokuapp.com/toys/page/1?perPage=5  - get the toys on page 1 fro there you get 5 toys 
 
- /add               - to add toys   - on body  you must to send all parameter . is required
+ /add               - to add toys   - on body  you must to send all parameter 
 
- /del               - on body you  must to send  id  to delet  
-
+ /del               - on body you  must to send  id  to delet    
+ 
  /update            - on body you must to send  obj toys and the id to change   
 
- /cat/:catId        - to get all toys by category and lcategoryimit example: 
+ /cat/:catId        - to get all toys by category and/or Quantity limit  example: 
      https://toysserverapi.herokuapp.com/toys/cat/car                     all toys by category name
 
      https://toysserverapi.herokuapp.com/toys/cat/car?pageNum=1          toys by category name on page 1
