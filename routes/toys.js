@@ -107,13 +107,28 @@ router.get('/countToys', (req, res, next) => {
             res.json({ doucuments: data })
         })
 });
-//http://localhost:3000/toys/price    on body  min and max
+//http://localhost:3000/toys/price   get  select by price  min and max  
+
+
 router.get('/price', (req, res, next) => {
-    let min = req.body.min || 0;
-    let max = req.body.max || 99999;
+    let min = req.query.min || 0;
+    let max = req.query.max || 99999;
+    if(min<0) 
+    min=0
+
+    if(max<0) 
+    max=9999
+    
     toysModel.find({ price: { $gte: min, $lte: max } })
         .sort({ _id: -1 })
         .then(data => {
+            console.log(data.length);
+            let info={
+                min:Number(min),
+                max:Number(max),
+                res:data.length
+            }
+            data.push(info)
             res.json(data)
 
         })
