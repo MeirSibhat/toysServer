@@ -1,6 +1,0 @@
-{
-    "mongoPass":"meir1221",
-   "mongoConnect":"mongodb+srv://meir:meir1221@cluster0-47zid.gcp.mongodb.net/dbToys?retryWrites=true&w=majority"
-
-   
-}
