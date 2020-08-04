@@ -65,5 +65,7 @@ http://localhost:3000/toys/price?min=20&max=40   you get the toys between the pr
 http://localhost:3000/toys/price?max=40           Between the prices 20 and 40
 http://localhost:3000/toys/price            you get  the toys  Between the prices 0 and 9999 default price 
 
- *if you send   negative number you get the  default   
+ *if you send   negative number you get the  default  
+ * You receive in addition to the results the   Summary object {"min": 20,"max": 40,"res": 6}
+
 
